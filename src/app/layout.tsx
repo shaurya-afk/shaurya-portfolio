@@ -18,6 +18,28 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shaurya Sharma",
   description: "Shaurya's Portfolio",
+  openGraph: {
+    title: "Shaurya Sharma",
+    description: "A clean and fast developer portfolio built with Next.js",
+    url: "https://shaurya-afk.vercel.app",
+    siteName: "Shaurya Sharma",
+    images: [
+      {
+        url: "https://shaurya-afk.vercel.app/portfolio_preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Shaurya Sharma Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shaurya Sharma",
+    description: "Check out my portfolio built with Next.js, Tailwind & more.",
+    creator: "@shauryadotafk",
+    images: ["https://shaurya-afk.vercel.app/portfolio_preview.png"],
+  },
 };
 
 export default function RootLayout({
@@ -32,8 +54,8 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          <Analytics/>
-          <SpeedInsights/>
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
