@@ -5,8 +5,33 @@ import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
 
 export function Contact() {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const [status, setStatus] = React.useState<"idle" | "success" | "error">("idle");
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        const form = e.currentTarget;
+
+        const formData = new FormData(form);
+
+        try {
+            const res = await fetch("https://formspree.io/f/xnnzbqgy", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                },
+                body: formData,
+            });
+
+            if (res.ok) {
+                setStatus("success");
+                form.reset(); // clear form
+            } else {
+                setStatus("error");
+            }
+        } catch (err) {
+            setStatus("error");
+        }
         console.log("Form submitted");
     };
     return (
@@ -16,12 +41,12 @@ export function Contact() {
                     <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
                         <LabelInputContainer>
                             <Label htmlFor="firstname">Name</Label>
-                            <Input id="firstname" placeholder="Shaurya" type="text" />
+                            <Input id="firstname" name="name" placeholder="Shaurya" type="text" required />
                         </LabelInputContainer>
                     </div>
                     <LabelInputContainer className="mb-4">
                         <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" placeholder="shauryasha090@gmail.com" type="email" />
+                        <Input id="email" name="email" placeholder="shauryasha090@gmail.com" type="email" required />
                     </LabelInputContainer>
                     <LabelInputContainer className="mb-4">
                         <Label htmlFor="message" className="mb-2 block text-sm font-medium">
@@ -29,8 +54,10 @@ export function Contact() {
                         </Label>
                         <textarea
                             id="message"
+                            name="message"
                             placeholder="I want to connect!"
                             className="w-full h-32 rounded-md border border-neutral-300 bg-transparent px-4 py-2 text-sm text-white placeholder-neutral-500 outline-none focus:ring-2 focus:ring-beige resize-none"
+                            required
                         />
                     </LabelInputContainer>
                     <button
@@ -40,8 +67,14 @@ export function Contact() {
                         Send &rarr;
                         <BottomGradient />
                     </button>
-
                 </form>
+                {status === "success" && (
+                    <p className="mt-4 text-green-500 text-sm">Thanks for contacting me! 🎉</p>
+                )}
+                {status === "error" && (
+                    <p className="mt-4 text-red-500 text-sm">Oops! Something went wrong. Please try again.</p>
+                )}
+
             </div>
         </section>
     );
