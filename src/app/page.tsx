@@ -8,21 +8,29 @@ import Footer from "@/components/footer/page";
 
 export default function Home() {
   return (
-    <>
+    <main className="min-h-screen">
       <HomeNavbar />
 
-      <TitleText text="About Me" />
-      <HomePage />
+      <article id="about" aria-labelledby="about-heading">
+        <TitleText text="About Me" />
+        <HomePage />
+      </article>
 
-      <SkillsPage />
+      <section id="skills" aria-labelledby="skills-heading">
+        <SkillsPage />
+      </section>
 
-      <TitleText text="Projects" />
-      <ProjectsPage />
+      <section id="projects" aria-labelledby="projects-heading">
+        <TitleText text="Projects" />
+        <ProjectsPage />
+      </section>
 
-      <TitleText text="Contact"/>
-      <Contact/>
+      <section id="contact" aria-labelledby="contact-heading">
+        <TitleText text="Contact"/>
+        <Contact/>
+      </section>
 
       <Footer/>
-    </>
+    </main>
   );
 }
