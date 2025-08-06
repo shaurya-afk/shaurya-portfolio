@@ -70,51 +70,52 @@ export function HomeNavbar() {
               />
             </MobileNavHeader>
 
-            <MobileNavMenu
-              id="mobile-menu"
-              isOpen={isMobileMenuOpen}
-              onClose={() => setIsMobileMenuOpen(false)}
-              aria-label="Mobile navigation menu"
-            >
-              {navItems.map((item, idx) => (
-                <a
-                  key={`mobile-link-${idx}`}
-                  href={item.link}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="relative text-neutral-600 dark:text-neutral-300"
-                  aria-label={`Navigate to ${item.name} section`}
-                >
-                  <span className="block">{item.name}</span>
-                </a>
-              ))}
-              <div className="flex w-full flex-col gap-4">
-                {[
-                  {
-                    label: "Github",
-                    href: "https://github.com/shaurya-afk",
-                    variant: "secondary",
-                  },
-                  {
-                    label: "Resume",
-                    href: "/resume.pdf",
-                    variant: "primary",
-                  },
-                ].map(({ label, href, variant }) => (
+            <div id="mobile-menu">
+              <MobileNavMenu
+                isOpen={isMobileMenuOpen}
+                onClose={() => setIsMobileMenuOpen(false)}
+                aria-label="Mobile navigation menu"
+              >
+                {navItems.map((item, idx) => (
                   <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    key={`mobile-link-${idx}`}
+                    href={item.link}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    aria-label={`${label === "Github" ? "Visit" : "Download"} ${label}`}
+                    className="relative text-neutral-600 dark:text-neutral-300"
+                    aria-label={`Navigate to ${item.name} section`}
                   >
-                    <NavbarButton variant={variant as NavbarVariant} className="w-full">
-                      {label}
-                    </NavbarButton>
+                    <span className="block">{item.name}</span>
                   </a>
                 ))}
-              </div>
-            </MobileNavMenu>
+                <div className="flex w-full flex-col gap-4">
+                  {[
+                    {
+                      label: "Github",
+                      href: "https://github.com/shaurya-afk",
+                      variant: "secondary",
+                    },
+                    {
+                      label: "Resume",
+                      href: "/resume.pdf",
+                      variant: "primary",
+                    },
+                  ].map(({ label, href, variant }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      aria-label={`${label === "Github" ? "Visit" : "Download"} ${label}`}
+                    >
+                      <NavbarButton variant={variant as NavbarVariant} className="w-full">
+                        {label}
+                      </NavbarButton>
+                    </a>
+                  ))}
+                </div>
+              </MobileNavMenu>
+            </div>
           </MobileNav>
         </Navbar>
       </nav>

@@ -28,7 +28,7 @@ export function Contact() {
             } else {
                 setStatus("error");
             }
-        } catch (err) {
+        } catch {
             setStatus("error");
         }
         console.log("Form submitted");

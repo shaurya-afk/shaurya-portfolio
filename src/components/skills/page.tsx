@@ -1,4 +1,4 @@
-import { SiAndroid, SiApachekafka, SiKotlin, SiMysql, SiNextdotjs, SiPostgresql, SiReact, SiRedis, SiSpring, SiTailwindcss } from "react-icons/si";
+import { SiAndroid, SiApachekafka, SiKotlin, SiMysql, SiNextdotjs, SiPostgresql, SiRedis, SiSpring } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 import { SkillCard } from "../SkillCard";
 
@@ -23,7 +23,7 @@ export function SkillsPage() {
                 </h2>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 place-items-center pt-10">
-                    {skills.map((skill, index) => (
+                    {skills.map((skill) => (
                         <SkillCard 
                             key={skill.name}
                             skillName={skill.name} 
