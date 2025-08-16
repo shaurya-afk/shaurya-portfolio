@@ -56,6 +56,14 @@ const projects = [
     technologies: ["Android", "Kotlin", "Java", "SQLite", "REST APIs"]
   },
   {
+    quote: "A mental health journaling app focused on turning failures into insights through reflective prompts.",
+    name: "FailForward",
+    title: "Mental Wellness Journal",
+    github: "https://github.com/shaurya-afk/FailForward",
+    demo: "https://failforward-demo.vercel.app",
+    technologies: ["Android", "Java", "SQLite", "UI/UX Design", "Mental Health"]
+  },
+  {
     quote: "A voice-based community app built to empower the unheard with anonymous audio interactions.",
     name: "Awaaz",
     title: "Voice-Driven Social Platform",
@@ -63,17 +71,11 @@ const projects = [
     technologies: ["Android", "Kotlin", "Firebase", "Real-time Audio", "Social Features"]
   },
   {
-    quote: "A mental health journaling app focused on turning failures into insights through reflective prompts.",
-    name: "FailForward",
-    title: "Mental Wellness Journal",
-    github: "https://github.com/shaurya-afk/FailForward",
-    technologies: ["Android", "Java", "SQLite", "UI/UX Design", "Mental Health"]
-  },
-  {
     quote: "Centralized notification system for microservices—built with Kafka, Redis, and Spring Boot.",
     name: "NotifyX",
     title: "Notification Middleware",
     github: "https://github.com/shaurya-afk/notifyx-cli",
+    demo: "https://notifyx-demo.vercel.app",
     technologies: ["Java", "Spring Boot", "Kafka", "Redis", "Microservices"]
   },
   {

@@ -22,35 +22,43 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://shaurya-afk.vercel.app"),
   title: {
-    default: "Shaurya Sharma - Full Stack Developer | Software Engineer | CSE Student at KIIT",
+    default: "Shaurya Sharma - Full Stack Developer | Backend Engineer | Mobile App Developer",
     template: "%s | Shaurya Sharma"
   },
-  description: "Shaurya Sharma is a passionate Full Stack Developer and Computer Science Engineering student at KIIT University. Specializing in Java, Spring Boot, React, Next.js, and modern web technologies. Explore my portfolio showcasing innovative projects and technical expertise.",
+  description: "Shaurya Sharma is a Full Stack Developer specializing in Java, Spring Boot, React, Next.js, and Android development. Freelance backend developer with experience in e-commerce, healthcare, and social platforms. Explore innovative projects including SwiftCart, Awaaz, and NotifyX.",
   keywords: [
     "Shaurya Sharma",
     "Full Stack Developer",
-    "Software Engineer",
+    "Backend Engineer",
+    "Mobile App Developer",
     "Java Developer",
     "Spring Boot Developer",
     "React Developer",
     "Next.js Developer",
-    "Web Developer",
-    "Software Development",
-    "Computer Science Engineering",
-    "KIIT University",
-    "Portfolio",
-    "Projects",
-    "Student Developer",
-    "Backend Developer",
-    "Frontend Developer",
-    "Mobile App Developer",
     "Android Developer",
     "Kotlin Developer",
+    "Freelance Developer",
+    "E-commerce Developer",
+    "Healthcare Developer",
+    "Social Platform Developer",
+    "SwiftCart",
+    "Awaaz",
+    "FailForward",
+    "NotifyX",
+    "Flight Management System",
+    "Hospital Management System",
+    "Car Wash Management",
     "PostgreSQL",
     "Redis",
     "Kafka",
     "Microservices",
-    "API Development"
+    "REST APIs",
+    "Mobile Development",
+    "Web Development",
+    "Software Engineering",
+    "KIIT University",
+    "Portfolio",
+    "Projects"
   ],
   authors: [{ name: "Shaurya Sharma", url: "https://shaurya-afk.vercel.app" }],
   creator: "Shaurya Sharma",
@@ -76,8 +84,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://shaurya-afk.vercel.app",
     siteName: "Shaurya Sharma Portfolio",
-    title: "Shaurya Sharma - Full Stack Developer | Software Engineer | CSE Student at KIIT",
-    description: "Passionate Full Stack Developer and Computer Science Engineering student at KIIT University. Specializing in Java, Spring Boot, React, Next.js, and modern web technologies.",
+    title: "Shaurya Sharma - Full Stack Developer | Backend Engineer | Mobile App Developer",
+    description: "Full Stack Developer specializing in Java, Spring Boot, React, Next.js, and Android development. Freelance backend developer with experience in e-commerce, healthcare, and social platforms. View projects like SwiftCart, Awaaz, and NotifyX.",
     images: [
       {
         url: "https://shaurya-afk.vercel.app/portfolio_preview.png",
@@ -99,8 +107,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@shauryadotafk",
     creator: "@shauryadotafk",
-    title: "Shaurya Sharma - Full Stack Developer | Software Engineer | CSE Student at KIIT",
-    description: "Passionate Full Stack Developer and Computer Science Engineering student at KIIT University. Check out my portfolio built with Next.js, Tailwind & modern technologies.",
+    title: "Shaurya Sharma - Full Stack Developer | Backend Engineer | Mobile App Developer",
+    description: "Full Stack Developer specializing in Java, Spring Boot, React, Next.js, and Android development. Freelance backend developer with experience in e-commerce, healthcare, and social platforms. Built with Next.js, Tailwind & modern technologies.",
     images: ["https://shaurya-afk.vercel.app/portfolio_preview.png"],
   },
   verification: {
@@ -135,6 +143,21 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="light dark" />
         <link rel="canonical" href="https://shaurya-afk.vercel.app" />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="author" content="Shaurya Sharma" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        
+        {/* Social Media Meta Tags */}
+        <meta property="og:site_name" content="Shaurya Sharma Portfolio" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:site" content="@shauryadotafk" />
+        <meta name="twitter:creator" content="@shauryadotafk" />
+        
+        {/* Additional Keywords */}
+        <meta name="keywords" content="Shaurya Sharma, Full Stack Developer, Backend Engineer, Mobile App Developer, Java Developer, Spring Boot, React, Next.js, Android, Kotlin, E-commerce, Healthcare, Social Platforms, Freelance Developer, SwiftCart, Awaaz, FailForward, NotifyX" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -198,7 +221,14 @@ export default function RootLayout({
                 "Apache Kafka",
                 "Microservices Architecture",
                 "RESTful APIs",
-                "Mobile App Development"
+                "Mobile App Development",
+                "E-commerce Development",
+                "Healthcare Systems",
+                "Social Platforms",
+                "Freelance Development",
+                "Backend Engineering",
+                "Database Design",
+                "API Development"
               ],
               "sameAs": [
                 "https://github.com/shaurya-afk",
@@ -210,7 +240,7 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "addressCountry": "IN"
               },
-              "description": "Full Stack Developer and Computer Science Engineering student at KIIT University, passionate about creating innovative digital solutions."
+              "description": "Full Stack Developer and freelance backend engineer specializing in Java, Spring Boot, React, Next.js, and Android development. Experience in e-commerce, healthcare, and social platforms with projects like SwiftCart, Awaaz, and NotifyX."
             })
           }}
         />
@@ -237,6 +267,79 @@ export default function RootLayout({
                 "@type": "SearchAction",
                 "target": "https://shaurya-afk.vercel.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+
+        {/* Projects Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "Portfolio Projects",
+              "description": "Featured projects by Shaurya Sharma",
+              "itemListElement": [
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "SwiftCart",
+                  "description": "E-commerce shopping platform with real-time inventory tracking",
+                  "applicationCategory": "E-commerce",
+                  "operatingSystem": "Android",
+                  "programmingLanguage": ["Kotlin", "Java"],
+                  "url": "https://github.com/shaurya-afk/swiftcart-android"
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "Awaaz",
+                  "description": "Voice-driven social platform for anonymous audio interactions",
+                  "applicationCategory": "Social Platform",
+                  "operatingSystem": "Android",
+                  "programmingLanguage": ["Kotlin"],
+                  "url": "https://github.com/shaurya-afk/Awaaz"
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "FailForward",
+                  "description": "Mental health journaling app focused on turning failures into insights",
+                  "applicationCategory": "Healthcare",
+                  "operatingSystem": "Android",
+                  "programmingLanguage": ["Java"],
+                  "url": "https://github.com/shaurya-afk/FailForward"
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "name": "NotifyX",
+                  "description": "Centralized notification system for microservices",
+                  "applicationCategory": "Backend Service",
+                  "programmingLanguage": ["Java"],
+                  "url": "https://github.com/shaurya-afk/notifyx-cli"
+                }
+              ]
+            })
+          }}
+        />
+
+        {/* Work Experience Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Shaurya Sharma",
+              "hasOccupation": {
+                "@type": "Occupation",
+                "name": "Freelance Backend Developer",
+                "description": "Developed backend for car wash management platform with booking, payments, and role-based access",
+                "dateOccupied": {
+                  "@type": "DateRange",
+                  "startDate": "2025-07-01",
+                  "endDate": "2025-08-31"
+                },
+                "skills": ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"]
               }
             })
           }}

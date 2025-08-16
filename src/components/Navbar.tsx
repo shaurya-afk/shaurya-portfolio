@@ -19,6 +19,10 @@ export function HomeNavbar() {
       link: "#projects",
     },
     {
+      name: "Experience",
+      link: "#experience",
+    },
+    {
       name: "Contact",
       link: "#contact",
     },

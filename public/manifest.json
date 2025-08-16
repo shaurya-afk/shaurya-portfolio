@@ -1,7 +1,7 @@
 {
   "name": "Shaurya Sharma - Full Stack Developer Portfolio",
   "short_name": "Shaurya Portfolio",
-  "description": "Full Stack Developer and Computer Science Engineering student at KIIT University. Specializing in Java, Spring Boot, React, Next.js, and modern web technologies.",
+  "description": "Full Stack Developer and freelance backend engineer specializing in Java, Spring Boot, React, Next.js, and Android development. Experience in e-commerce, healthcare, and social platforms.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -44,6 +44,18 @@
       "short_name": "Projects",
       "description": "View my projects",
       "url": "/#projects",
+      "icons": [
+        {
+          "src": "/favicon.ico",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Experience",
+      "short_name": "Experience",
+      "description": "View my experience",
+      "url": "/#experience",
       "icons": [
         {
           "src": "/favicon.ico",

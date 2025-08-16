@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useCallback, useEffect, useState } from "react";
 import { FiGithub } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 export const InfiniteMovingCards = ({
   items,
@@ -16,6 +17,7 @@ export const InfiniteMovingCards = ({
     name: string;
     title: string;
     github: string;
+    demo?: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -46,11 +48,11 @@ export const InfiniteMovingCards = ({
   const getSpeed = useCallback(() => {
     if (containerRef.current) {
       if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
+        containerRef.current.style.setProperty("--animation-duration", "30s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "60s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "120s");
       }
     }
   }, [speed]);
@@ -95,22 +97,22 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
-        {items.map((item) => (
-          <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-8 py-6 md:w-[450px] dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
-            key={item.name}
-          >
+                 {items.map((item) => (
+           <li
+             className="relative w-[450px] max-w-full shrink-0 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md px-10 py-8 md:w-[650px] dark:border-gray-700/30 dark:bg-gray-800/10"
+             key={item.name}
+           >
             <blockquote>
               <div
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className="relative z-20 text-sm leading-[1.6] font-normal text-neutral-800 dark:text-gray-100">
+              <span className="relative z-20 text-base leading-[1.7] font-normal text-neutral-800 dark:text-gray-100">
                 {item.quote}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
+              <div className="relative z-20 mt-8 flex flex-row items-center">
+                <span className="flex flex-col gap-2">
+                  <span className="text-base leading-[1.6] font-semibold text-neutral-700 dark:text-gray-300">
                     {item.name}
                   </span>
                   <span className="text-sm leading-[1.6] font-normal text-neutral-500 dark:text-gray-400">
@@ -118,14 +120,28 @@ export const InfiniteMovingCards = ({
                   </span>
                 </span>
               </div>
-              <a
-                href={item.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-3 right-3 text-neutral-500 hover:text-black dark:hover:text-white transition"
-              >
-                <FiGithub className="w-5 h-5" />
-              </a>
+              <div className="absolute top-4 right-4 flex gap-3">
+                {item.demo && (
+                  <a
+                    href={item.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-200"
+                    title="Live Demo"
+                  >
+                    <FiExternalLink className="w-5 h-5" />
+                  </a>
+                )}
+                <a
+                  href={item.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-500 hover:text-black dark:hover:text-white transition-colors duration-200"
+                  title="GitHub Repository"
+                >
+                  <FiGithub className="w-5 h-5" />
+                </a>
+              </div>
 
             </blockquote>
           </li>
