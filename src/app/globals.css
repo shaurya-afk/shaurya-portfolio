@@ -14,6 +14,115 @@ body {
   @apply bg-black text-[#f5f5dc]; /* beige */
 }
 
+/* Custom Scrollbar Styles */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f5f5dc 0%, #d4d4a8 50%, #f5f5dc 100%);
+  border-radius: 6px;
+  border: 2px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e8e8c8 0%, #c8c890 50%, #e8e8c8 100%);
+  transform: scale(1.05);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #d4d4a8 0%, #b8b878 50%, #d4d4a8 100%);
+}
+
+::-webkit-scrollbar-corner {
+  background: #1a1a1a;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f5f5dc #1a1a1a;
+}
+
+/* Custom scrollbar for specific elements */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f5f5dc #1a1a1a;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f5f5dc 0%, #d4d4a8 50%, #f5f5dc 100%);
+  border-radius: 4px;
+  border: 1px solid #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #e8e8c8 0%, #c8c890 50%, #e8e8c8 100%);
+}
+
+/* Thin scrollbar variant */
+.custom-scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar-thin::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  border: 1px solid #1a1a1a;
+}
+
+/* Hover-only scrollbar variant */
+.custom-scrollbar-hover::-webkit-scrollbar {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-scrollbar-hover:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.custom-scrollbar-hover::-webkit-scrollbar-thumb {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.custom-scrollbar-hover:hover::-webkit-scrollbar-thumb {
+  opacity: 1;
+}
+
+/* Smooth scrollbar animation */
+@keyframes scrollbar-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(245, 245, 220, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(245, 245, 220, 0.6);
+  }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  animation: scrollbar-glow 2s ease-in-out infinite;
+}
+
 @theme inline {
   --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 

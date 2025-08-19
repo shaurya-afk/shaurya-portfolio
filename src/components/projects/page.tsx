@@ -75,7 +75,7 @@ const projects = [
     name: "NotifyX",
     title: "Notification Middleware",
     github: "https://github.com/shaurya-afk/notifyx-cli",
-    demo: "https://notifyx-demo.vercel.app",
+    // demo: "https://notifyx-demo.vercel.app",
     technologies: ["Java", "Spring Boot", "Kafka", "Redis", "Microservices"]
   },
   {

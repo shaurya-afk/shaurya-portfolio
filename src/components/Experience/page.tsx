@@ -54,5 +54,5 @@ const experience = {
     duration: "July 2025 – Aug 2025",
     description: "Developed the backend for a UAE-based car wash management platform with booking, payments, and role-based access. Built REST APIs using Next.js, PostgreSQL, and Prisma. Collaborated with a frontend developer to deliver a seamless client solution.",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
-    demo: "https://vwashcar1.vercel.app/"
+    demo: "https://hydroshine.vercel.app/"
 };
