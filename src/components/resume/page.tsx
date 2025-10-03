@@ -2,6 +2,29 @@
 
 import { useEffect } from 'react';
 import { initScrollAnimations } from '@/lib/scrollAnimations';
+import { 
+    SiKotlin, 
+    SiCplusplus, 
+    SiSharp, 
+    SiMysql, 
+    SiSpring, 
+    SiPrisma, 
+    SiNextdotjs, 
+    SiApachekafka, 
+    SiPostgresql, 
+    SiRedis, 
+    SiAmazon, 
+    SiVercel, 
+    SiDocker, 
+    SiGit, 
+    SiApachemaven, 
+    SiGradle, 
+    SiOpenai,
+    SiReact,
+    SiTypescript
+} from 'react-icons/si';
+import { FaDatabase, FaCode, FaCloud, FaTools, FaShieldAlt, FaJava } from 'react-icons/fa';
+import { RiJavascriptFill } from 'react-icons/ri';
 
 export function ResumePage() {
     useEffect(() => {
@@ -44,51 +67,75 @@ export function ResumePage() {
                             {/* Programming Languages & Frameworks */}
                             <div className="space-y-2 sm:space-y-3">
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold hover-glow" style={{backgroundColor: '#5A4636', color: 'white'}}>J</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold hover-glow" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <FaJava className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Java</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>K</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiKotlin className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Kotlin</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>C</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiCplusplus className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>C++</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>#</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiSharp className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>C#</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>S</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <FaDatabase className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>SQL</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>S</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiSpring className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Spring Boot</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>J</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <FaCode className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>JPA Data</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>P</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiPrisma className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Prisma</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>N</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiNextdotjs className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Next.js</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>K</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiApachekafka className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Apache Kafka</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>P</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiPostgresql className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>PostgreSQL</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>M</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiMysql className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>MySQL</span>
                                 </div>
                             </div>
@@ -96,51 +143,75 @@ export function ResumePage() {
                             {/* Databases, Cloud & Tools */}
                             <div className="space-y-2 sm:space-y-3">
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>R</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiRedis className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Redis</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>A</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiAmazon className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>AWS (ECS, S3, RDS)</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>V</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiVercel className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Vercel</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>D</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiDocker className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Docker</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>G</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiGit className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Git</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>M</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiApachemaven className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Maven</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>G</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiGradle className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Gradle</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>A</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <FaTools className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>Agile</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>T</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <FaCode className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>TDD</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>O</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <FaShieldAlt className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>OAuth2</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>J</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <RiJavascriptFill className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>JWT</span>
                                 </div>
                                 <div className="flex items-center hover-lift smooth-transition">
-                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>AI</div>
+                                    <div className="w-4 h-4 sm:w-5 sm:h-5 rounded mr-2 flex items-center justify-center text-xs font-bold" style={{backgroundColor: '#5A4636', color: 'white'}}>
+                                        <SiOpenai className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    </div>
                                     <span className="text-xs sm:text-sm" style={{color: '#3C3C3C'}}>GenAI</span>
                                 </div>
                             </div>
