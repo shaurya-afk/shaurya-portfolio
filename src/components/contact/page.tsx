@@ -1,168 +1,106 @@
 "use client";
-import React from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { cn } from "@/lib/utils";
 
-export function Contact() {
-    const [status, setStatus] = React.useState<"idle" | "success" | "error">("idle");
+import { useEffect } from 'react';
+import { initScrollAnimations } from '@/lib/scrollAnimations';
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-
-        try {
-            const res = await fetch("https://formspree.io/f/xnnzbqgy", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                },
-                body: formData,
-            });
-
-            if (res.ok) {
-                setStatus("success");
-                form.reset(); // clear form
-            } else {
-                setStatus("error");
-            }
-        } catch {
-            setStatus("error");
-        }
-        console.log("Form submitted");
-    };
-    
+export function ContactPage() {
+    useEffect(() => {
+        const cleanup = initScrollAnimations();
+        return cleanup;
+    }, []);
     return (
-        <section className="py-10">
-            <div className="max-w-4xl mx-auto px-4">
-                <h2 id="contact-heading" className="sr-only">
-                    Contact Shaurya Sharma - Get in Touch
-                </h2>
-                
-                <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
-                    <form className="my-8" onSubmit={handleSubmit} aria-labelledby="contact-heading">
-                        <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-                            <LabelInputContainer>
-                                <Label htmlFor="firstname">Name</Label>
-                                <Input 
-                                    id="firstname" 
-                                    name="name" 
-                                    placeholder="Shaurya" 
-                                    type="text" 
-                                    required 
-                                    aria-describedby="name-help"
-                                />
-                                <div id="name-help" className="sr-only">
-                                    Please enter your full name
-                                </div>
-                            </LabelInputContainer>
+        <div id="contact" className="flex flex-col justify-between px-4 sm:px-6 md:px-8 py-8 sm:py-8 md:py-16 min-h-[60vh] sm:min-h-screen" style={{backgroundColor: '#F9EFE7'}}>
+            {/* Main content */}
+            <div className="max-w-4xl mx-auto text-center scroll-animate">
+                {/* Title */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6" style={{color: '#5A4636'}}>Get In Touch</h1>
+                <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-6 md:mb-10 max-w-2xl mx-auto px-4" style={{color: '#3C3C3C'}}>
+                    I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about technology and innovation.
+                </p>
+
+                {/* Contact buttons */}
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 px-4 stagger-animate">
+                    {/* Email */}
+                    <a 
+                        href="mailto:shauryasha090@gmail.com" 
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center space-x-2 sm:space-x-3 hover:scale-105 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover-lift hover-glow"
+                    >
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                            <svg className="w-4 h-4 style={{color: '#3C3C3C'}}" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
                         </div>
-                        <LabelInputContainer className="mb-4">
-                            <Label htmlFor="email">Email Address</Label>
-                            <Input 
-                                id="email" 
-                                name="email" 
-                                placeholder="shauryasha090@gmail.com" 
-                                type="email" 
-                                required 
-                                aria-describedby="email-help"
-                            />
-                            <div id="email-help" className="sr-only">
-                                Please enter a valid email address
-                            </div>
-                        </LabelInputContainer>
-                        <LabelInputContainer className="mb-4">
-                            <Label htmlFor="message" className="mb-2 block text-sm font-medium">
-                                Tell me something?
-                            </Label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                placeholder="I want to connect!"
-                                className="w-full h-32 rounded-md border border-neutral-300 bg-transparent px-4 py-2 text-sm text-white placeholder-neutral-500 outline-none focus:ring-2 focus:ring-beige resize-none"
-                                required
-                                aria-describedby="message-help"
-                            />
-                            <div id="message-help" className="sr-only">
-                                Please enter your message or inquiry
-                            </div>
-                        </LabelInputContainer>
-                        <button
-                            className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
-                            type="submit"
-                            aria-describedby="submit-status"
-                        >
-                            Send &rarr;
-                            <BottomGradient />
-                        </button>
-                        
-                        <div id="submit-status" aria-live="polite">
-                            {status === "success" && (
-                                <p className="mt-4 text-green-500 text-sm">Thanks for contacting me! 🎉</p>
-                            )}
-                            {status === "error" && (
-                                <p className="mt-4 text-red-500 text-sm">Oops! Something went wrong. Please try again.</p>
-                            )}
+                                <span className="font-medium text-sm sm:text-base" style={{color: '#3C3C3C'}}>Email</span>
+                    </a>
+
+                    {/* LinkedIn */}
+                    <a 
+                        href="https://linkedin.com/in/shaurya-afk" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center space-x-2 sm:space-x-3 hover:scale-105 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover-lift hover-glow"
+                    >
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                            <svg className="w-4 h-4 style={{color: '#3C3C3C'}}" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
+                            </svg>
                         </div>
-                    </form>
-                </div>
-                
-                {/* Additional contact information for SEO */}
-                <div className="mt-12 text-center">
-                    <h3 className="text-lg font-semibold mb-6">Other Ways to Connect</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-                        <div className="p-4 bg-neutral-50 dark:bg-neutral-900 rounded-lg">
-                            <h4 className="font-medium mb-2">Email</h4>
-                            <p className="text-neutral-600 dark:text-neutral-400">
-                                <a href="mailto:shauryasha090@gmail.com" className="hover:underline">
-                                    shauryasha090@gmail.com
-                                </a>
-                            </p>
+                                <span className="font-medium text-sm sm:text-base" style={{color: '#3C3C3C'}}>LinkedIn</span>
+                    </a>
+
+                    {/* GitHub */}
+                    <a 
+                        href="https://github.com/shaurya-afk" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center space-x-2 sm:space-x-3 hover:scale-105 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover-lift hover-glow"
+                    >
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                            <svg className="w-4 h-4 style={{color: '#3C3C3C'}}" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clipRule="evenodd" />
+                            </svg>
                         </div>
-                        <div className="p-4 bg-neutral-50 dark:bg-neutral-900 rounded-lg">
-                            <h4 className="font-medium mb-2">GitHub</h4>
-                            <p className="text-neutral-600 dark:text-neutral-400">
-                                <a href="https://github.com/shaurya-afk" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                                    github.com/shaurya-afk
-                                </a>
-                            </p>
+                                <span className="font-medium text-sm sm:text-base" style={{color: '#3C3C3C'}}>GitHub</span>
+                    </a>
+
+                    {/* X (Twitter) */}
+                    <a 
+                        href="https://x.com/shauryadotafk" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center space-x-2 sm:space-x-3 hover:scale-105 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover-lift hover-glow"
+                    >
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                            <svg className="w-4 h-4 style={{color: '#3C3C3C'}}" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
                         </div>
-                        <div className="p-4 bg-neutral-50 dark:bg-neutral-900 rounded-lg">
-                            <h4 className="font-medium mb-2">LinkedIn</h4>
-                            <p className="text-neutral-600 dark:text-neutral-400">
-                                <a href="https://linkedin.com/in/shaurya-afk" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                                    linkedin.com/in/shaurya-afk
-                                </a>
-                            </p>
+                                <span className="font-medium text-sm sm:text-base" style={{color: '#3C3C3C'}}>X</span>
+                    </a>
+
+                    {/* Resume */}
+                    <a 
+                        href="/resume.pdf" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl sm:rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center space-x-2 sm:space-x-3 hover:scale-105 transition-all duration-300 hover:bg-white/15 hover:shadow-xl hover-lift hover-glow"
+                    >
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                            <svg className="w-4 h-4 style={{color: '#3C3C3C'}}" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                            </svg>
                         </div>
-                    </div>
+                                <span className="font-medium text-sm sm:text-base" style={{color: '#3C3C3C'}}>Resume</span>
+                    </a>
                 </div>
             </div>
-        </section>
-    );
-}
 
-const BottomGradient = () => {
-    return (
-        <>
-            <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
-            <span className="absolute inset-x-10 -bottom-px mx-auto block h-px w-1/2 bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 blur-sm transition duration-500 group-hover/btn:opacity-100" />
-        </>
-    );
-};
-
-const LabelInputContainer = ({
-    children,
-    className,
-}: {
-    children: React.ReactNode;
-    className?: string;
-}) => {
-    return (
-        <div className={cn("flex w-full flex-col space-y-2", className)}>
-            {children}
+            {/* Bottom text - positioned at the very bottom */}
+            <div className="space-y-2 px-4 text-center mt-8 sm:mt-0 scroll-animate-scale" style={{color: '#3C3C3C'}}>
+                <p className="text-base sm:text-lg hover-lift smooth-transition">Let&apos;s build something amazing together!</p>
+                <p className="text-xs sm:text-sm hover-lift smooth-transition">Available for freelance projects and full-time opportunities</p>
+            </div>
         </div>
     );
-};
+}
