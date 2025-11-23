@@ -50,6 +50,9 @@ export function AboutPage() {
                                     <p className="text-base sm:text-lg italic" style={{color: '#3C3C3C'}}>
                                         4th year Computer Science Engineering student at KIIT University, Bhubaneswar, India.
                                     </p>
+                                    <p className="text-xs sm:text-sm mt-2 italic smooth-transition" style={{color: '#3C3C3C'}}>
+                                        Currently a Full-Stack Developer Intern at VIAI Beauty.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -61,10 +64,10 @@ export function AboutPage() {
                             <p className="text-base sm:text-lg italic" style={{color: '#3C3C3C'}}>
                                 4th year Computer Science Engineering student at KIIT University, Bhubaneswar, India.
                             </p>
-                            {/* Subtle internship mention (mobile/tablet) */}
-                            {/* <p className="text-xs sm:text-sm mt-2 italic smooth-transition" style={{color: '#3C3C3C'}}>
+                            {/* Experience mention */}
+                            <p className="text-xs sm:text-sm mt-2 italic smooth-transition" style={{color: '#3C3C3C'}}>
                                 Currently a Full-Stack Developer Intern at VIAI Beauty.
-                            </p> */}
+                            </p>
                         </div>
                         
                         {/* About paragraphs */}
