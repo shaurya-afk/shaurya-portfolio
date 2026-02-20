@@ -9,11 +9,14 @@ export function ContactPage() {
         return cleanup;
     }, []);
     return (
-        <div id="contact" className="flex flex-col justify-between px-4 sm:px-6 md:px-8 py-8 sm:py-8 md:py-16 min-h-[60vh] sm:min-h-screen" style={{backgroundColor: '#F9EFE7'}}>
+        <div id="contact" className="relative overflow-hidden noise-texture flex flex-col justify-between px-4 sm:px-6 md:px-8 py-8 sm:py-8 md:py-16 min-h-[60vh] sm:min-h-screen" style={{backgroundColor: '#F9EFE7'}}>
+            {/* Same background as Experience section */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F9EFE7] via-[#F2E5D8] to-[#F9EFE7] opacity-80"></div>
+            <div className="absolute inset-0 bg-gradient-radial from-[#F2E5D8]/40 via-transparent to-transparent"></div>
             {/* Main content */}
-            <div className="max-w-4xl mx-auto text-center scroll-animate">
+            <div className="relative z-10 max-w-4xl mx-auto text-center scroll-animate">
                 {/* Title */}
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6" style={{color: '#5A4636'}}>Get In Touch</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6" style={{color: '#1a1a1a'}}>Get In Touch</h1>
                 <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-6 md:mb-10 max-w-2xl mx-auto px-4" style={{color: '#3C3C3C'}}>
                     I&apos;m always open to discussing new opportunities, collaborations, or just having a chat about technology and innovation.
                 </p>

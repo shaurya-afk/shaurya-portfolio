@@ -37,9 +37,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Clean background for about page */
+/* About/Resume content area - transparent so parent noise + gradients show through */
 .about-page {
-  background: #F9EFE7;
+  background: transparent;
 }
 
 /* Glassmorphism styles */
@@ -281,19 +281,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #5A4636 0%, #4A3A25 50%, #5A4636 100%);
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #2d2d2d 100%);
   border-radius: 6px;
   border: 2px solid #F9EFE7;
   transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #4A3A25 0%, #3A2A15 50%, #4A3A25 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
   transform: scale(1.05);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(135deg, #3A2A15 0%, #2A1A05 50%, #3A2A15 100%);
+  background: linear-gradient(135deg, #0d0d0d 0%, #000000 50%, #0d0d0d 100%);
 }
 
 ::-webkit-scrollbar-corner {
@@ -303,13 +303,13 @@ body {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #5A4636 #F9EFE7;
+  scrollbar-color: #2d2d2d #F9EFE7;
 }
 
 /* Custom scrollbar for specific elements */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #5A4636 #F9EFE7;
+  scrollbar-color: #2d2d2d #F9EFE7;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -323,14 +323,14 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #5A4636 0%, #4A3A25 50%, #5A4636 100%);
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #2d2d2d 100%);
   border-radius: 4px;
   border: 1px solid #F9EFE7;
   transition: all 0.3s ease;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #4A3A25 0%, #3A2A15 50%, #4A3A25 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
 }
 
 /* Thin scrollbar variant */
@@ -366,10 +366,10 @@ body {
 /* Smooth scrollbar animation */
 @keyframes scrollbar-glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(90, 70, 54, 0.3);
+    box-shadow: 0 0 5px rgba(26, 26, 26, 0.3);
   }
   50% {
-    box-shadow: 0 0 15px rgba(90, 70, 54, 0.6);
+    box-shadow: 0 0 15px rgba(26, 26, 26, 0.6);
   }
 }
 

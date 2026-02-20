@@ -346,7 +346,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:bg-black dark:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-black dark:bg-black dark:text-white`}
+        style={{ backgroundColor: '#F9EFE7' }}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
