@@ -48,7 +48,7 @@ export function HomePage() {
                                 WebkitFontSmoothing: 'antialiased',
                                 MozOsxFontSmoothing: 'grayscale'
                             }}>
-                            Full Stack Developer
+                            Software Engineer | Backend & AI
                         </h2>
                         <p className="text-sm xs:text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-sf"
                             style={{
@@ -58,7 +58,7 @@ export function HomePage() {
                                 WebkitFontSmoothing: 'antialiased',
                                 MozOsxFontSmoothing: 'grayscale'
                             }}>
-                            Creating developer-centric tools and automation infrastructure for deterministic and scalable workflows.                        </p>
+                            Building scalable backend systems, AI applications, and developer tools. </p>
                     </div>
 
                     {/* Call to Action */}
@@ -111,7 +111,7 @@ export function HomePage() {
                                 WebkitFontSmoothing: 'antialiased',
                                 MozOsxFontSmoothing: 'grayscale'
                             }}>
-                            <span className="font-medium">KIIT University</span> • Computer Science Engineering • 2026
+                            <span className="font-medium">KIIT University</span> • B.Tech CSE • 2026
                         </p>
                     </div>
                 </div>
