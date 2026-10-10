@@ -21,13 +21,13 @@ export function AboutPage() {
 
       <div className="relative z-10 min-h-screen about-page">
         {/* Desktop Portrait - Right Side */}
-        <div className="hidden lg:block absolute md:top-30 right-10 w-1/4 h-1/2 z-20 scroll-animate-right">
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-10 w-1/4 h-3/5 z-20 scroll-animate-right">
           <Image
-            src="/self.jpg"
+            src="/self.png"
             alt="Shaurya Sharma"
             width={400}
             height={600}
-            className="w-full h-full object-cover rounded-2xl hover-lift smooth-transition"
+            className="w-full h-full object-cover object-top rounded-2xl hover-lift smooth-transition"
             priority
           />
         </div>
@@ -41,11 +41,11 @@ export function AboutPage() {
               {/* Mobile/Tablet Square Image - aligned next to text */}
               <div className="flex items-start gap-4 mb-4">
                 <Image
-                  src="/self.jpg"
+                  src="/self.png"
                   alt="Shaurya Sharma"
                   width={96}
                   height={96}
-                  className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full flex-shrink-0 hover-lift smooth-transition"
+                  className="w-20 h-20 sm:w-24 sm:h-24 object-cover object-top rounded-full flex-shrink-0 hover-lift smooth-transition"
                 />
                 <div className="flex-1">
                   <h1
@@ -64,14 +64,8 @@ export function AboutPage() {
                     className="text-base sm:text-lg italic"
                     style={{ color: "#3C3C3C" }}
                   >
-                    4th year Computer Science Engineering student at KIIT
+                    Computer Science Graduate from KIIT
                     University, Bhubaneswar, India.
-                  </p>
-                  <p
-                    className="text-xs sm:text-sm mt-2 italic smooth-transition"
-                    style={{ color: "#3C3C3C" }}
-                  >
-                    Currently a Full-Stack Developer Intern at VIAI Beauty.
                   </p>
                 </div>
               </div>

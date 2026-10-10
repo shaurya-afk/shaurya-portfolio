@@ -20,47 +20,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shaurya-afk.vercel.app"),
+  metadataBase: new URL("https://shauryasha.com"),
   title: {
-    default: "Shaurya Sharma - Full Stack Developer | Backend Engineer | Mobile App Developer",
+    default: "Shaurya Sharma - Software Engineer | Backend Developer | AI Developer",
     template: "%s | Shaurya Sharma"
   },
-  description: "Shaurya Sharma is a Full Stack Developer specializing in Java, Spring Boot, React, Next.js, and Android development. Freelance backend developer with experience in e-commerce, healthcare, and social platforms. Explore innovative projects including SwiftCart, Awaaz, and NotifyX.",
+  description: "I'm a Software Engineer with internship experience building asynchronous, cloud-deployed backend services using Python and Java. I build backend and full-stack applications, AI-powered coding workflows, requirements and test-generation tools, and developer context services using FastAPI, Spring Boot, Next.js, PostgreSQL, AWS, and LangGraph.",
   keywords: [
     "Shaurya Sharma",
-    "Full Stack Developer",
+    "Software Engineer",
     "Backend Engineer",
-    "Mobile App Developer",
+    "Full Stack Developer",
+    "AI Developer",
+    "AI-Powered Applications",
     "Java Developer",
     "Spring Boot Developer",
-    "React Developer",
+    "Python Developer",
+    "FastAPI Developer",
     "Next.js Developer",
-    "Android Developer",
-    "Kotlin Developer",
-    "Freelance Developer",
-    "E-commerce Developer",
-    "Healthcare Developer",
-    "Social Platform Developer",
-    "SwiftCart",
-    "Awaaz",
-    "FailForward",
-    "NotifyX",
-    "Flight Management System",
-    "Hospital Management System",
-    "Car Wash Management",
+    "React Developer",
     "PostgreSQL",
-    "Redis",
-    "Kafka",
-    "Microservices",
+    "AWS",
+    "LLM Applications",
+    "AI Agents",
+    "LangChain",
+    "LangGraph",
+    "Retrieval-Augmented Generation",
+    "Developer Tools",
     "REST APIs",
-    "Mobile Development",
-    "Web Development",
-    "Software Engineering",
+    "Microservices",
+    "Apache Kafka",
+    "Redis",
+    "Android Development",
+    "Kotlin",
+    "AI Coding Agents",
+    "Software Engineering Automation",
+    "Requirements Engineering",
+    "Test Asset Generation",
+    "Model Context Protocol",
+    "Developer Context Services",
+    "Nascent AI",
+    "Specforge",
+    "Unbiased",
     "KIIT University",
     "Portfolio",
     "Projects"
   ],
-  authors: [{ name: "Shaurya Sharma", url: "https://shaurya-afk.vercel.app" }],
+  authors: [{ name: "Shaurya Sharma", url: "https://shauryasha.com" }],
   creator: "Shaurya Sharma",
   publisher: "Shaurya Sharma",
   formatDetection: {
@@ -82,24 +88,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shaurya-afk.vercel.app",
+    url: "https://shauryasha.com",
     siteName: "Shaurya Sharma Portfolio",
-    title: "Shaurya Sharma - Full Stack Developer | Backend Engineer | Mobile App Developer",
-    description: "Full Stack Developer specializing in Java, Spring Boot, React, Next.js, and Android development. Freelance backend developer with experience in e-commerce, healthcare, and social platforms. View projects like SwiftCart, Awaaz, and NotifyX.",
+    title: "Shaurya Sharma - Software Engineer | Backend Developer | AI Developer",
+    description: "I'm a Software Engineer with internship experience building asynchronous, cloud-deployed backend services using Python and Java. I build backend and full-stack applications, AI-powered coding workflows, requirements and test-generation tools, and developer context services using FastAPI, Spring Boot, Next.js, PostgreSQL, AWS, and LangGraph.",
     images: [
       {
-        url: "https://shaurya-afk.vercel.app/portfolio_preview.png",
+        url: "https://shauryasha.com/portfolio_preview.png",
         width: 1200,
         height: 630,
-        alt: "Shaurya Sharma - Full Stack Developer Portfolio",
+        alt: "Shaurya Sharma - Software Engineer Portfolio",
         type: "image/png",
       },
       {
-        url: "https://shaurya-afk.vercel.app/nice_pic.jpg",
+        url: "https://shauryasha.com/nice_pic.png",
         width: 400,
         height: 400,
         alt: "Shaurya Sharma - Profile Picture",
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },
@@ -107,15 +113,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@shauryadotafk",
     creator: "@shauryadotafk",
-    title: "Shaurya Sharma - Full Stack Developer | Backend Engineer | Mobile App Developer",
-    description: "Full Stack Developer specializing in Java, Spring Boot, React, Next.js, and Android development. Freelance backend developer with experience in e-commerce, healthcare, and social platforms. Built with Next.js, Tailwind & modern technologies.",
-    images: ["https://shaurya-afk.vercel.app/portfolio_preview.png"],
+    title: "Shaurya Sharma - Software Engineer | Backend Developer | AI Developer",
+    description: "I'm a Software Engineer with internship experience building asynchronous, cloud-deployed backend services using Python and Java. I build backend and full-stack applications, AI-powered coding workflows, requirements and test-generation tools, and developer context services using FastAPI, Spring Boot, Next.js, PostgreSQL, AWS, and LangGraph.",
+    images: ["https://shauryasha.com/portfolio_preview.png"],
   },
   verification: {
     google: "gJruHD5wKJTggpkREnbKbzR5KAytowu5rjSr1S5N8j4",
   },
   alternates: {
-    canonical: "https://shaurya-afk.vercel.app",
+    canonical: "https://shauryasha.com",
   },
   category: "Portfolio",
   other: {
@@ -142,7 +148,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#000000" />
         <meta name="color-scheme" content="light dark" />
-        <link rel="canonical" href="https://shaurya-afk.vercel.app" />
+        <link rel="canonical" href="https://shauryasha.com" />
         
         {/* Additional SEO meta tags */}
         <meta name="author" content="Shaurya Sharma" />
@@ -157,7 +163,7 @@ export default function RootLayout({
         <meta name="twitter:creator" content="@shauryadotafk" />
         
         {/* Additional Keywords */}
-        <meta name="keywords" content="Shaurya Sharma, Full Stack Developer, Backend Engineer, Mobile App Developer, Java Developer, Spring Boot, React, Next.js, Android, Kotlin, E-commerce, Healthcare, Social Platforms, Freelance Developer, SwiftCart, Awaaz, FailForward, NotifyX" />
+        <meta name="keywords" content="Shaurya Sharma, Software Engineer, Backend Engineer, Full Stack Developer, AI Developer, Java, Spring Boot, Python, FastAPI, React, Next.js, PostgreSQL, AWS, LLM Applications, AI Agents, LangGraph, Developer Tools, REST APIs, Microservices, Requirements Engineering, Test Generation, Model Context Protocol, Nascent AI, Specforge, Unbiased" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -180,22 +186,22 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Shaurya Sharma",
-              "url": "https://shaurya-afk.vercel.app",
+              "url": "https://shauryasha.com",
               "image": [
                 {
                   "@type": "ImageObject",
-                  "url": "https://shaurya-afk.vercel.app/portfolio_preview.png",
+                  "url": "https://shauryasha.com/portfolio_preview.png",
                   "width": 1200,
                   "height": 630
                 },
                 {
                   "@type": "ImageObject",
-                  "url": "https://shaurya-afk.vercel.app/nice_pic.jpg",
+                  "url": "https://shauryasha.com/nice_pic.png",
                   "width": 400,
                   "height": 400
                 }
               ],
-              "jobTitle": "Full Stack Developer",
+              "jobTitle": "Software Engineer",
               "worksFor": {
                 "@type": "EducationalOrganization",
                 "name": "KIIT University"
@@ -205,9 +211,17 @@ export default function RootLayout({
                 "name": "KIIT University"
               },
               "knowsAbout": [
-                "Web Development",
                 "Software Engineering",
-                "Computer Science",
+                "Backend Engineering",
+                "Full-Stack Development",
+                "AI-Powered Applications",
+                "AI Agents",
+                "Large Language Models",
+                "Retrieval-Augmented Generation",
+                "LangChain",
+                "LangGraph",
+                "Python",
+                "FastAPI",
                 "Java",
                 "Spring Boot",
                 "React",
@@ -217,18 +231,18 @@ export default function RootLayout({
                 "Kotlin",
                 "Android Development",
                 "PostgreSQL",
+                "DynamoDB",
                 "Redis",
                 "Apache Kafka",
+                "AWS",
                 "Microservices Architecture",
                 "RESTful APIs",
-                "Mobile App Development",
+                "Database Design",
+                "API Development",
+                "Developer Tools",
                 "E-commerce Development",
                 "Healthcare Systems",
-                "Social Platforms",
-                "Freelance Development",
-                "Backend Engineering",
-                "Database Design",
-                "API Development"
+                "Real-Time Systems"
               ],
               "sameAs": [
                 "https://github.com/shaurya-afk",
@@ -240,7 +254,7 @@ export default function RootLayout({
                 "@type": "PostalAddress",
                 "addressCountry": "IN"
               },
-              "description": "Full Stack Developer and freelance backend engineer specializing in Java, Spring Boot, React, Next.js, and Android development. Experience in e-commerce, healthcare, and social platforms with projects like SwiftCart, Awaaz, and NotifyX."
+              "description": "I'm a Software Engineer with internship experience building asynchronous, cloud-deployed backend services using Python and Java. I build backend and full-stack applications, AI-powered coding workflows, requirements and test-generation tools, and developer context services using FastAPI, Spring Boot, Next.js, PostgreSQL, AWS, and LangGraph."
             })
           }}
         />
@@ -253,8 +267,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "Shaurya Sharma Portfolio",
-              "url": "https://shaurya-afk.vercel.app",
-              "description": "Portfolio website showcasing Full Stack Developer projects and skills",
+              "url": "https://shauryasha.com",
+              "description": "Portfolio of Shaurya Sharma, showcasing software engineering, backend development, full-stack applications, AI-powered systems, and developer tools.",
               "author": {
                 "@type": "Person",
                 "name": "Shaurya Sharma"
@@ -265,7 +279,7 @@ export default function RootLayout({
               },
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://shaurya-afk.vercel.app/search?q={search_term_string}",
+                "target": "https://shauryasha.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
@@ -284,38 +298,24 @@ export default function RootLayout({
               "itemListElement": [
                 {
                   "@type": "SoftwareApplication",
-                  "name": "SwiftCart",
-                  "description": "E-commerce shopping platform with real-time inventory tracking",
-                  "applicationCategory": "E-commerce",
-                  "operatingSystem": "Android",
-                  "programmingLanguage": ["Kotlin", "Java"],
-                  "url": "https://github.com/shaurya-afk/swiftcart-android"
+                  "name": "Nascent AI",
+                  "description": "AI-powered software engineering automation platform that uses a LangGraph pipeline to clone GitHub repositories, summarize files with an LLM, plan changes from natural-language requests, generate diffs, and open commits and pull requests through a GitHub App. Includes an asynchronous FastAPI backend with JWT authentication and a Next.js dashboard.",
+                  "applicationCategory": "DeveloperApplication",
+                  "programmingLanguage": ["Python", "TypeScript", "JavaScript"]
                 },
                 {
                   "@type": "SoftwareApplication",
-                  "name": "Awaaz",
-                  "description": "Voice-driven social platform for anonymous audio interactions",
-                  "applicationCategory": "Social Platform",
-                  "operatingSystem": "Android",
-                  "programmingLanguage": ["Kotlin"],
-                  "url": "https://github.com/shaurya-afk/Awaaz"
+                  "name": "Specforge",
+                  "description": "Requirements-engineering tool with a FastAPI backend and Next.js dashboard that converts varied inputs into structured requirements and test artifacts. Includes automated tests with 85% PyTest coverage and continuous integration through GitHub Actions.",
+                  "applicationCategory": "DeveloperApplication",
+                  "programmingLanguage": ["Python", "TypeScript", "JavaScript"]
                 },
                 {
                   "@type": "SoftwareApplication",
-                  "name": "FailForward",
-                  "description": "Mental health journaling app focused on turning failures into insights",
-                  "applicationCategory": "Healthcare",
-                  "operatingSystem": "Android",
-                  "programmingLanguage": ["Java"],
-                  "url": "https://github.com/shaurya-afk/FailForward"
-                },
-                {
-                  "@type": "SoftwareApplication",
-                  "name": "NotifyX",
-                  "description": "Centralized notification system for microservices",
-                  "applicationCategory": "Backend Service",
-                  "programmingLanguage": ["Java"],
-                  "url": "https://github.com/shaurya-afk/notifyx-cli"
+                  "name": "Unbiased",
+                  "description": "Developer context service built around a FastAPI and FastMCP server that exposes task-aware tools over REST and MCP. Its get_context_for tool uses Gemini to filter stored context for a given task, backed by PostgreSQL and secured with OAuth 2.1 and JWT-based sessions.",
+                  "applicationCategory": "DeveloperApplication",
+                  "programmingLanguage": ["Python", "TypeScript", "JavaScript"]
                 }
               ]
             })

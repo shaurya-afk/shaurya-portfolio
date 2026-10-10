@@ -59,7 +59,7 @@ export function ResumePage() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-10 md:mb-12 scroll-animate-scale"
               style={{ color: "#1a1a1a" }}
             >
-              Experience.
+              Experience
             </h1>
             <div className="space-y-10 sm:space-y-8 md:space-y-10 stagger-animate">
               <div className="hover-lift smooth-transition">
@@ -167,7 +167,7 @@ export function ResumePage() {
                 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-8 md:mb-16"
                 style={{ color: "#1a1a1a" }}
               >
-                Resume.
+                Background
               </h1>
 
               {/* Education Section */}
