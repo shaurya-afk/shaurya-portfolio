@@ -73,7 +73,7 @@ export function ResumePage() {
                   className="text-xs sm:text-sm italic mb-2"
                   style={{ color: "#3C3C3C" }}
                 >
-                  Full-Stack Developer Intern (Remote, US) | Oct 2025 – Dec 2025
+                  Full-Stack Developer Intern (Remote)
                 </p>
                 <p
                   className="text-xs sm:text-sm mb-2"
@@ -113,7 +113,7 @@ export function ResumePage() {
                   className="text-xs sm:text-sm italic mb-2"
                   style={{ color: "#3C3C3C" }}
                 >
-                  Backend Developer Intern (Remote) | Jan 2026 – Feb 2026
+                  Backend Developer Intern (Remote)
                 </p>
                 <p
                   className="text-xs sm:text-sm mb-2"
@@ -201,7 +201,7 @@ export function ResumePage() {
                         className="text-xs sm:text-sm"
                         style={{ color: "#3C3C3C" }}
                       >
-                        Computer Science Engineering - B.Tech
+                        Computer Science Engineering - B.Tech (Honours)
                       </p>
                     </div>
                   </div>
@@ -604,7 +604,7 @@ export function ResumePage() {
                       style={{ color: "#3C3C3C" }}
                     >
                       {" "}
-                      Autonomous Software Engineering Platform | June 2026
+                      Autonomous Software Engineering Platform
                     </p>
                     <p
                       className="text-xs sm:text-sm mb-2"
@@ -671,7 +671,7 @@ export function ResumePage() {
                       className="text-xs sm:text-sm italic mb-2"
                       style={{ color: "#3C3C3C" }}
                     >
-                      Developer Context Platform | Mar 2026 – Apr 2026
+                      Developer Context Platform
                     </p>
                     <p
                       className="text-xs sm:text-sm mb-2"
@@ -735,8 +735,7 @@ export function ResumePage() {
                       className="text-xs sm:text-sm italic mb-2"
                       style={{ color: "#3C3C3C" }}
                     >
-                      AI-Native Product Management Platform | Apr 2026 – June
-                      2026
+                      AI-Native Product Management Platform 
                     </p>
                     <p
                       className="text-xs sm:text-sm mb-2"
