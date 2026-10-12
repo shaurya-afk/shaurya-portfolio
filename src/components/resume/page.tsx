@@ -73,7 +73,7 @@ export function ResumePage() {
                   className="text-xs sm:text-sm italic mb-2"
                   style={{ color: "#3C3C3C" }}
                 >
-                  Full-Stack Developer Intern (Remote)
+                  Full-Stack Developer Intern (Remote, USA)
                 </p>
                 <p
                   className="text-xs sm:text-sm mb-2"
