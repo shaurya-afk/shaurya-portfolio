@@ -201,7 +201,7 @@ export function ResumePage() {
                         className="text-xs sm:text-sm"
                         style={{ color: "#3C3C3C" }}
                       >
-                        Computer Science Engineering - B.Tech (Honours)
+                        Computer Science Engineering - B.Tech (Hons.)
                       </p>
                     </div>
                   </div>

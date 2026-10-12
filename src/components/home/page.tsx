@@ -111,7 +111,7 @@ export function HomePage() {
                                 WebkitFontSmoothing: 'antialiased',
                                 MozOsxFontSmoothing: 'grayscale'
                             }}>
-                            <span className="font-medium">KIIT University</span> • B.Tech (Honours) CSE • 2026
+                            <span className="font-medium">KIIT University</span> • B.Tech CSE (Hons.) • 2026
                         </p>
                     </div>
                 </div>
